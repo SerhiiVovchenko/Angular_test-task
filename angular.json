@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "serg": {
+    "my-angular": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/serg",
+            "outputPath": "dist/my-angular",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -30,6 +30,8 @@
               "src/assets"
             ],
             "styles": [
+              "bulma/css/bulma.css",
+              "@fortawesome/fontawesome-free/css/all.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -65,10 +67,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "serg:build:production"
+              "browserTarget": "my-angular:build:production"
             },
             "development": {
-              "browserTarget": "serg:build:development"
+              "browserTarget": "my-angular:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -76,7 +78,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "serg:build"
+            "browserTarget": "my-angular:build"
           }
         },
         "test": {
@@ -105,6 +107,6 @@
     }
   },
   "cli": {
-    "analytics": "921b53f1-1c59-421e-bbd7-cedb8f98010b"
+    "analytics": "fca1cc16-2d96-434d-8772-113ed2834128"
   }
 }
