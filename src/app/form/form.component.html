@@ -1,0 +1,19 @@
+<form class="box">
+  <div class="field">
+    <label class="label">Password</label>
+    <div class="control">
+      <input
+        class="input"
+        type="password"
+        placeholder="********"
+        [formControl]="password"
+      />
+    </div>
+  </div>
+</form>
+
+<app-form-val-bloc
+  [passwordStrength]="passwordStrength"
+  [pasId]="pasId"
+  [pasId2]="pasId2"
+></app-form-val-bloc>

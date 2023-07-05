@@ -1,0 +1,36 @@
+<div
+  class="notification"
+  [ngClass]="{
+    'has-background-success': passwordStrength === 'strong',
+    'has-background-grey-lighter':
+      passwordStrength !== 'easy' && pasId === 'Valid' && pasId2 === 'off',
+    'has-background-danger':
+      passwordStrength === 'easy' || pasId === 'notValid',
+    'has-background-warning': passwordStrength === 'medium' && pasId2 === 'on'
+  }"
+>
+  The password is not secure
+</div>
+<div
+  class="notification"
+  [ngClass]="{
+    'has-background-success': passwordStrength === 'strong',
+    'has-background-grey-lighter':
+      passwordStrength !== 'easy' && pasId === 'Valid' && pasId2 === 'off',
+    'has-background-danger': pasId === 'notValid',
+    'has-background-warning': passwordStrength === 'medium' && pasId2 === 'on'
+  }"
+>
+  Password of medium complexity
+</div>
+<div
+  class="notification"
+  [ngClass]="{
+    'has-background-success': passwordStrength === 'strong',
+    'has-background-grey-lighter':
+      passwordStrength !== 'easy' && pasId === 'Valid' && pasId2 === 'off',
+    'has-background-danger': pasId === 'notValid'
+  }"
+>
+  Password of excellent complexity
+</div>
